@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eks-addons"
+version = "0.1.0"
+description = "CLI to list default AWS EKS add-on versions for a given Kubernetes version"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "LicenseRef-Proprietary"
+authors = [{ name = "Eric Skaggs" }]
+dependencies = [
+  "click>=8.1.0",
+  "PyYAML>=6.0",
+  "tabulate>=0.9.0",
+  "colorama>=0.4.6",
+]
+
+[project.scripts]
+eks-addons = "eks_addons.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
