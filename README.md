@@ -26,3 +26,7 @@ eks-addons -k 1.29 --no-color
 ## Notes
 - Requires AWS CLI configured and credentials allowing `eks:DescribeAddonVersions`.
 - Colors only apply to `-o table` and only when output is a TTY (not piped).
+
+## License
+
+MIT. See [LICENSE](LICENSE).

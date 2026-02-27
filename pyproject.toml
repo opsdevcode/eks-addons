@@ -8,8 +8,8 @@ version = "0.1.0"
 description = "CLI to list default AWS EKS add-on versions for a given Kubernetes version"
 readme = "README.md"
 requires-python = ">=3.8"
-license = "LicenseRef-Proprietary"
-authors = [{ name = "Eric Skaggs" }]
+license = { text = "MIT" }
+authors = [{ name = "Eric Skaggs", email = "ericskaggs@gmail.com" }]
 dependencies = [
   "click>=8.1.0",
   "PyYAML>=6.0",
@@ -25,3 +25,6 @@ package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
